@@ -8,8 +8,8 @@ import './App.css';
 function App() {
    let [images, setImages]  = useState([
      {image: 'part1', active: true},
-     {image: 'part2', active: true},
-     {image: 'part3', active: true}
+     {image: 'part2', active: false},
+     {image: 'part3', active: false}
    ]);
    let [currentNum, setCurrentNum] = useState(0);
    function nextNumber() {
@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <div className="carousel">
         {images.map(image => 
-          <div className="carousel">
+          <div key={image.name} className="carousel" style={image.active ? {display: 'block'} : {display: 'none'}}>
             <img src={require(`./img/${image.image}.png`)} alt={image.name}/>
           </div>
         )}
