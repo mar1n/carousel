@@ -6,30 +6,36 @@ import part3 from './img/part3.png'
 import './App.css';
 
 function App() {
-   let [images, setImages]  = useState([
-     {image: 'part1', active: true},
-     {image: 'part2', active: false},
-     {image: 'part3', active: false}
-   ]);
-   let [currentNum, setCurrentNum] = useState(0);
-   function nextNumber() {
-     console.log('next');
-    //  currentNum === number.length - 1
-    //  ? setCurrentNum(0)
-    //  : setCurrentNum(currentNum + 1)
-   }
-   function previusNumber() {
-     console.log('previus');
-    //  currentNum === 0
-    //  ? setCurrentNum(number.length - 1)
-    //  : setCurrentNum(currentNum - 1)
-   }
+  let [images, setImages] = useState( [
+      { name: 'part1', active: true },
+      { name: 'part2', active: false },
+      { name: 'part3', active: false }
+    ]
+  );
+  let [currentNum, setCurrentNum] = useState(0);
+  function nextNumber(id, title) {
+    console.log(images.length);
+    let data = [...images];
+    console.log(data);
+   data.map((item, index) => {
+     index == 1
+     ? item.active = true
+     : item.active = false
+   });
+   setImages(data);
+  }
+  function previusNumber() {
+    console.log('previus');
+  }
   return (
+
     <div className="App">
+      {console.log('hi')}
+      <p>{currentNum}</p>
       <div className="carousel">
-        {images.map(image => 
-          <div key={image.name} className="carousel" style={image.active ? {display: 'block'} : {display: 'none'}}>
-            <img src={require(`./img/${image.image}.png`)} alt={image.name}/>
+        {images.map(image =>
+          <div key={image.name} className="carousel" style={image.active ? { display: 'block' } : { display: 'none' }}>
+            <img src={require(`./img/${image.name}.png`)} alt={image.name} />
           </div>
         )}
       </div>
@@ -40,7 +46,7 @@ function App() {
         </button>
         <button
           onClick={previusNumber}
-          >Previus
+        >Previus
           </button>
       </div>
     </div>
