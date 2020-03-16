@@ -12,6 +12,8 @@
 }
 
 @keyframes rolles {
-    from { transform: translateY(100%)}
-    to { transform: translateY(-100%)}
+    0% { transform: translateY(30px)}
+    25% { transform: translateY(0px)}
+    50% { transform: translateY(0px)}
+    100% { transform: translateY(-100px)}
 }
