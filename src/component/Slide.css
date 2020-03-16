@@ -1,0 +1,17 @@
+.main {
+    background-color: chartreuse;
+    height: 25px;
+    overflow: hidden;
+}
+.mainSlide {
+    display: grid;
+    background-color: chocolate;
+    justify-content: center;
+    align-items: center;
+    animation: rolles 5s linear infinite;
+}
+
+@keyframes rolles {
+    from { transform: translateY(100%)}
+    to { transform: translateY(-100%)}
+}
