@@ -3,17 +3,24 @@
     height: 25px;
     overflow: hidden;
 }
+
 .mainSlide {
     display: grid;
     background-color: chocolate;
     justify-content: center;
     align-items: center;
-    animation: rolles 5s linear infinite;
+    animation: rolles 20s linear infinite;
 }
 
 @keyframes rolles {
     0% { transform: translateY(30px)}
+    5% { transform: translateY(0px)}
     25% { transform: translateY(0px)}
-    50% { transform: translateY(0px)}
+    30% { transform: translateY(-21px)}
+    50% { transform: translateY(-21px)}
+    55% { transform: translateY(-42px)}
+    70% { transform: translateY(-42px)}
+    75% { transform: translateY(-63px)}
+    95% { transform: translateY(-63px)}
     100% { transform: translateY(-100px)}
 }
