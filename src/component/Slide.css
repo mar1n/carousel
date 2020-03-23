@@ -24,3 +24,8 @@
     95% { transform: translateY(-63px)}
     100% { transform: translateY(-100px)}
 }
+
+.clock {
+    height: 20px;
+    background-color: pink;
+}

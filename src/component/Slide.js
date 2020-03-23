@@ -1,6 +1,6 @@
 import React from 'react'
 import './Slide.css'
-
+import Clock from './Clock'
 export default function Slide() {
     return (
         <>
@@ -12,6 +12,7 @@ export default function Slide() {
                     <div className="second">Paris</div>
                 </div>
             </div>
+            <div className="clock"><Clock/></div>
         </>
     );
 }
