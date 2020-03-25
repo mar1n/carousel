@@ -6,13 +6,9 @@ export default function Slide() {
         <>
             <div className="main">
                 <div className="mainSlide">
-                    <div className="first">London</div>
-                    <div className="second">New York</div>
-                    <div className="first">Moscow</div>
-                    <div className="second">Paris</div>
+                    <Clock/>
                 </div>
             </div>
-            <div className="clock"><Clock/></div>
         </>
     );
 }
