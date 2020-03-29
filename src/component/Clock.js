@@ -4,10 +4,24 @@ import './Clock.css'
 export default function Clock() {
     let [clock, setClock] = useState([
         {
-            London: new Date(),
-            NewYork: new Date(),
-            Moscow: new Date(),
-            Paris: new Date()
+            name: 'London',
+            time: new Date(),
+            timezone: 'Europe/London',
+        },
+        {
+            name: 'NewYork',
+            time: new Date(),
+            timezone: 'America/New_York',
+        },
+        {
+            name: 'Moscow',
+            time: new Date(),
+            timezone: 'Europe/Moscow',
+        },
+        {
+            name: 'Paris',
+            time: new Date(),
+            timezone: 'Europe/Paris',
         }
     ]);
 
@@ -15,21 +29,21 @@ export default function Clock() {
         setInterval(() => thick(), 1000)
     })
 
-
-
     const thick = () => {
-        //console.log('Test');
-        // setClock( clock.map(timer =>  (
-        //         { ...timer,London: new Date(), NewYork: new Date(), Moscow: new Date(), Paris: new Date() }
-        //         )));
-        setClock([{ London: new Date(), NewYork: new Date(), Moscow: new Date(), Paris: new Date() }])
+        setClock(clock.map((clock) => {
+            let szymon = new Date().toLocaleString("en-US", {timeZone: clock.timezone});
+          return  {...clock, time: new Date(szymon)}
+        }));
     }
     return (
         <>
-            <div className="first">London {clock[0].London.toLocaleTimeString()}</div>
-            <div className="second">New York {clock[0].NewYork.toLocaleTimeString()}</div>
-            <div className="first">Moscow {clock[0].Moscow.toLocaleTimeString()}</div>
-            <div className="second">Paris {clock[0].Paris.toLocaleTimeString()}</div>
+            {
+                clock.map(clock => 
+                <div className="test" key={clock.name}>
+                    { clock.name } { clock.time.toLocaleTimeString()}
+                </div>
+                )
+            }
         </>
     )
 }
