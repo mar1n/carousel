@@ -9,8 +9,26 @@
     background-color: chocolate;
     justify-content: center;
     align-items: center;
-    animation: rolles 20s linear infinite;
+    animation: rolles 10s linear infinite 1s;
 }
+.test {
+    height: 20px;
+}
+
+/* .mainSlide :first-child {
+    color: blue;
+    z-index:-1;
+    animation: element-change 20s ease infinite 1s;
+}
+
+@keyframes element-change {
+    0%,50% {
+        transform: translateY(0%);
+      }
+      70%,100% {
+        transform: translateY(300%);
+      }
+} */
 
 @keyframes rolles {
     0% { transform: translateY(30px)}
