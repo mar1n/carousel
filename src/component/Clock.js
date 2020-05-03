@@ -39,7 +39,7 @@ export default function Clock() {
         <>
             {
                 clock.map((clock, index) => 
-                <div className="test" key={index}>
+                <div className="timeZone" key={index}>
                     { clock.name } { clock.time.toLocaleTimeString()}
                 </div>
                 )
