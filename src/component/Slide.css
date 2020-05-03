@@ -1,12 +1,12 @@
 .main {
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
+    border-bottom: 1px solid gray;
     height: 25px;
     overflow: hidden;
 }
 
 .mainSlide {
     display: grid;
-    background-color: chocolate;
     justify-content: center;
     align-items: center;
     animation: rolles 10s linear infinite 1s;
@@ -31,16 +31,16 @@
 } */
 
 @keyframes rolles {
-    0% { transform: translateY(30px)}
-    5% { transform: translateY(0px)}
-    25% { transform: translateY(0px)}
-    30% { transform: translateY(-21px)}
-    50% { transform: translateY(-21px)}
-    55% { transform: translateY(-42px)}
-    70% { transform: translateY(-42px)}
-    75% { transform: translateY(-63px)}
-    95% { transform: translateY(-63px)}
-    100% { transform: translateY(-100px)}
+    0% { transform: translateY(1px)}
+    5% { transform: translateY(1px)}
+    25% { transform: translateY(1px)}
+    30% { transform: translateY(-19px)}
+    50% { transform: translateY(-19px)}
+    55% { transform: translateY(-39px)}
+    70% { transform: translateY(-39px)}
+    75% { transform: translateY(-59px)}
+    95% { transform: translateY(-59px)}
+    100% { transform: translateY(-59px)}
 }
 
 .clock {

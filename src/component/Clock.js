@@ -19,9 +19,9 @@ export default function Clock() {
             timezone: 'Europe/Moscow',
         },
         {
-            name: 'Paris',
+            name: 'London',
             time: new Date(),
-            timezone: 'Europe/Paris',
+            timezone: 'Europe/London',
         }
     ]);
 
@@ -38,8 +38,8 @@ export default function Clock() {
     return (
         <>
             {
-                clock.map(clock => 
-                <div className="test" key={clock.name}>
+                clock.map((clock, index) => 
+                <div className="test" key={index}>
                     { clock.name } { clock.time.toLocaleTimeString()}
                 </div>
                 )
